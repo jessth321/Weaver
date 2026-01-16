@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: d54396572c74c0e47965737949edac56
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - TT Octosquares Trl
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 437d3f9a80e69684088fbeba460bc00e, type: 3}
+  - {fileID: 12800000, guid: 5479ad4f3572d454d9bf7f00b6b96e7e, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -20,8 +20,13 @@ public class Enemy : Entity
     public float speed;
     public int damage;
 
+    public bool isCaught;
+
+
     public Rigidbody2D rb;
     public Collider2D col;
+    //public Transform spriteTransform;
+    public Animator anim;
 
     public Vector2 moveDirection;
 
@@ -35,7 +40,7 @@ public class Enemy : Entity
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
 

@@ -24,7 +24,7 @@ public class UIManager : MonoBehaviour
 
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         UICanvasWS = CanvasWS;
         UICanvas = Canvas;
@@ -45,13 +45,13 @@ public class UIManager : MonoBehaviour
     {
         healthBar.fillAmount = (float)current / (float)maxHealth;
 
-        healthTMPro.text = current.ToString() + " / " + maxHealth;
+        healthTMPro.text = current.ToString() + " / " + maxHealth.ToString();
     }
 
     public static void SetSilk(int current, int maxSilk)
     {
         silkBar.fillAmount = (float)current / (float)maxSilk;
 
-        silkTMPro.text = current.ToString() + " / " + maxSilk;
+        silkTMPro.text = current.ToString() + " / " + maxSilk.ToString();
     }
 }

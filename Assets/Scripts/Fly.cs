@@ -30,23 +30,36 @@ public class Fly : Enemy
     // Update is called once per frame
     void Update()
     {
-        if (moveState == MoveState.WANDER)
+        if (!isCaught)
         {
-            //rb.velocity = Vector2.zero;
-            rb.AddForce(moveDirection * speed * Time.deltaTime);
-
-            moveDirection = Quaternion.AngleAxis(rotDelta * Time.deltaTime, Vector3.forward) * moveDirection;
-
-            if (timer > moveDirTime)
+            if (moveState == MoveState.WANDER)
             {
-                rotDelta = Random.Range(-180, 180);
+                //rb.velocity = Vector2.zero;
+                rb.AddForce(moveDirection * speed * Time.deltaTime);
 
-                timer = 0;
-                moveDirTime = Random.Range(0.5f, 2f);
+                moveDirection = Quaternion.AngleAxis(rotDelta * Time.deltaTime, Vector3.forward) * moveDirection;
+
+                if (timer > moveDirTime)
+                {
+                    rotDelta = Random.Range(-180, 180);
+
+                    timer = 0;
+                    moveDirTime = Random.Range(0.5f, 2f);
+                }
+
+                timer += Time.deltaTime;
             }
-
-            timer += Time.deltaTime;
         }
+        else
+        {
+
+            anim.SetBool("IsDying", true);
+            rb.velocity = Vector2.zero;
+            rb.isKinematic = true;
+            col.enabled = false;
+
+        }
+        
     }
 
 
